@@ -41,7 +41,12 @@ The response from your device will be a JSON array containing zero or more objec
 
 ### Explanation of properties:
 
+The response represents two things. First, the pin and its capabilities:
+
 * *pinInfo* - a `PinInfo` object (see below)
+
+And the current state of the pin:
+
 * *pinOpen* - `true` or `false` (whether the pin has been opened)
 * *pinMode* - `OUTPUT` or `INPUT` or `null` if pin is not open
 * *value* - `HIGH` or `LOW` or `null` if pin is not open as `INPUT`
