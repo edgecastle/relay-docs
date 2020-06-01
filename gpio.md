@@ -25,8 +25,8 @@ The response from your device will be a JSON array containing zero or more objec
 ```json
     [{
         "pinInfo":{
-            "number":2,"
-            type":"Gpio",
+            "number":2,
+            "type":"Gpio",
             "canRead":true,
             "canWrite":true,
             "name":"GPIO 2 (SDA)"
@@ -41,13 +41,13 @@ The response from your device will be a JSON array containing zero or more objec
 
 Explanation of properties:
 
-*number* - The logical GPIO pin number (i.e. the GPIO number, not the pin number)
-*canRead* - `true` or `false` (whether the GPIO pin can be read right now - requires the pin to be Opened in INPUT mode first)
-*canWrite* - `true` or `false` (whether the GPIO pin can be pulled high or low - requires the pin to be Opened in OUTPUT mode first)
-*name* - The name of the pin
-*type* - `Gpio` only supported
-*pinMode* - `OUTPUT` or `INPUT`
-*value* - `HIGH` or `LOW`
+* *number* - The logical GPIO pin number (i.e. the GPIO number, not the pin number)
+* *canRead* - `true` or `false` (whether the GPIO pin can be read right now - requires the pin to be Opened in INPUT mode first)
+* *canWrite* - `true` or `false` (whether the GPIO pin can be pulled high or low - requires the pin to be Opened in OUTPUT mode first)
+* *name* - The name of the pin
+* *type* - `Gpio` only supported
+* *pinMode* - `OUTPUT` or `INPUT`
+* *value* - `HIGH` or `LOW`
 
 
 For more advanced device data handling than just high/low, please see [Custom Properties](./properties).
