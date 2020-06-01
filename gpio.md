@@ -39,15 +39,20 @@ The response from your device will be a JSON array containing zero or more objec
     ]
 ```
 
-Explanation of properties:
+### Explanation of properties:
+
+* *pinInfo* - a `PinInfo` object (see below)
+* *pinOpen* - `true` or `false` (whether the pin has been opened)
+* *pinMode* - `OUTPUT` or `INPUT` or `null` if pin is not open
+* *value* - `HIGH` or `LOW` or `null` if pin is not open as `INPUT`
+
+#### PinInfo Object
 
 * *number* - The logical GPIO pin number (i.e. the GPIO number, not the pin number)
 * *canRead* - `true` or `false` (whether the GPIO pin can be read right now - requires the pin to be Opened in INPUT mode first)
 * *canWrite* - `true` or `false` (whether the GPIO pin can be pulled high or low - requires the pin to be Opened in OUTPUT mode first)
 * *name* - The name of the pin
 * *type* - `Gpio` only supported
-* *pinMode* - `OUTPUT` or `INPUT`
-* *value* - `HIGH` or `LOW`
 
 
 For more advanced device data handling than just high/low, please see [Custom Properties](./properties).
